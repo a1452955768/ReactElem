@@ -12,21 +12,14 @@ export class App extends Component {
       
    }
  }
- 
-
   render() {
     return (
-      
         <BrowserRouter>
-      <Route path="/" component={Login}></Route>
+      <Route path="/login" component={Login}></Route>
       <Route exact path="/" component={Chengshiliebiao}></Route>
       <Route path="/search/:id" component={Search}></Route>
       </BrowserRouter>
-      
     )
   }
+}
   export default App
-
-
-
-

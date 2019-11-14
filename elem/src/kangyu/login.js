@@ -78,7 +78,7 @@ backs(){
         return (
             <div id="all">
                 <header>
-                    <i className="el-icon-arrow-left" id="left" onClick="this.backs"></i>
+                    <i className="el-icon-arrow-left" id="left" onClick={this.backs}></i>
                     <span id='middle'>密码登录</span>
                 </header>
                 <div id="center">

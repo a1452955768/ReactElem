@@ -76,7 +76,7 @@ export class chengshiliebiao extends Component {
             <div>
                 <div id="header">
                     <Link to="" id="eleme">eleme</Link>
-                    <Link to="" id="login" >登录|注册</Link>
+                    <Link to="/login" id="login" >登录|注册</Link>
                     <Link to="" id="login" >
                         <i className="el-icon-s-custom"></i>
                     </Link>
