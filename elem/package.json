@@ -7,10 +7,7 @@
     "element-theme-default": "^1.4.13",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-<<<<<<< HEAD
     "react-hot-loader": "^4.5.3",
-=======
->>>>>>> 320f024ed9393f30f6213b826490fa7f6ae49225
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
   },
