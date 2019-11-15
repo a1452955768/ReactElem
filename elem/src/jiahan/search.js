@@ -46,7 +46,7 @@ export class search extends Component {
              {
                  this.state.getData.map((v,i)=>{
                      return (
-                        <Link >   <li><Link to={{pathname:"/",state:{
+                        <Link key={i}>   <li ><Link to={{pathname:"/home",state:{
                             a:v
                         }}}><p id="weight">{v.name}</p><p id="qing">{v.address}</p></Link></li> </Link>
                      )

@@ -72,51 +72,50 @@ export class chengshiliebiao extends Component {
 
     render() {
         console.log(this.state.group)
-        return (
-            <div>
-                <div id="header">
-                    <Link to="" id="eleme">eleme</Link>
-                    <Link to="/login" id="login" >登录|注册</Link>
-                    <Link to="" id="login" >
-                        <i className="el-icon-s-custom"></i>
-                    </Link>
-                </div>
-                <ul id="hotAddress">
-                    <li id="hotHeader">热门城市</li>
-                    {
-                        this.state.hot.map((v, i) => {
-                            return <li key={i}>
-                                <span>
-                          <Link>      {v.name}</Link>
-                                </span>
-                                
-                            </li>
-                        })
-                    }
+        return (    <div>
+            <div id="header">
+                <Link to="" id="eleme">eleme</Link>
+                <Link to="/login" id="login" >登录|注册</Link>
+                <Link to="" id="login" >
+                    <i className="el-icon-s-custom"></i>
+                </Link>
+            </div>
+            <ul id="hotAddress">
+                <li id="hotHeader">热门城市</li>
+                {
+                    this.state.hot.map((v, i) => {
+                        return <li key={i}>
+                            <span>
+                      <Link to={"/search/"+v.id+"/"+v.name}>      {v.name}</Link>
+                            </span>
+                            
+                        </li>
+                    })
+                }
+            </ul>
+            <div id="holeAddress" >
+                <ul>
+                {
+                    this.state.word.map((v,i)=>{
+                    return (<div key={i}>
+                                <li id="wordDiv" key={i}>
+                                <span>{v}</span></li>
+
+                            {
+                                this.state.group[v].map((vr,ir)=>{
+                                return (<li key={ir}><Link to={"/search/"+vr.id+"/"+vr.name}>{vr.name}</Link></li>)
+                                })
+                            }
+                            
+
+
+                    </div>
+                    )
+                    })
+                }
                 </ul>
-                <div id="holeAddress" >
-                    <ul>
-                    {
-                        this.state.word.map((v,i)=>{
-                        return (<div>
-                                    <li id="wordDiv">
-                                    <span>{v}</span></li>
-
-                                {
-                                    this.state.group[v].map((vr,ir)=>{
-                                    return (<li key={ir}><Link to={"/search/"+vr.id+"/"+vr.name}>{vr.name}</Link></li>)
-                                    })
-                                }
-                                
-
-
-                        </div>
-                        )
-                        })
-                    }
-                    </ul>
-                </div>
-            </div >
+            </div>
+        </div >
         )
     }
 }
