@@ -104,7 +104,7 @@ export class chengshiliebiao extends Component {
 
                                 {
                                     this.state.group[v].map((vr,ir)=>{
-                                    return (<li key={ir}><Link to={"/search/"+vr.id}>{vr.name}</Link></li>)
+                                    return (<li key={ir}><Link to={"/search/"+vr.id+"/"+vr.name}>{vr.name}</Link></li>)
                                     })
                                 }
                                 
