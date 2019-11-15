@@ -12,7 +12,7 @@ export class login extends Component {
             imgs: "",
             passw: "password",
             zh: "",
-            bol: true
+            bol: false
         }
         this.yanZhengMa = this.yanZhengMa.bind(this)
         this.backs = this.backs.bind(this)
